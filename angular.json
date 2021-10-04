@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "TG-Memorandum"
+  "defaultProject": "TG-Memorandum",
+  "cli": {
+    "analytics": "73614d25-d3dc-4627-a587-c8319937f96a"
+  }
 }
