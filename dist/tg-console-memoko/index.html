@@ -1,0 +1,413 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Memo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            /* width: 100%;
+            height: 150%; */
+            /* overflow: hidden; */
+            padding: 0px;
+            margin: 0;
+            /* position: relative; */
+        }
+        
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            /* width: 100%;
+            margin: 0; */
+            width: 100%;
+            height: 100%;
+            /* max-height: 1000px; */
+        }
+        
+        .content {
+            text-shadow: none;
+            /* width: 100%;
+            min-width: 1000px;
+            height: 100%; */
+            float: left;
+            width: 50%;
+            padding: 0px;
+        }
+        
+        .content {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .container {
+            text-shadow: none;
+            width: 30%;
+            background: white;
+            color: #000000;
+            /* padding: 0; */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30), 0 10px 12px rgba(0, 0, 0, 0.22);
+            /* float: left; */
+            margin-left: -3%;
+            margin-bottom: 5%;
+            display: block;
+            position: center;
+        }
+        
+        .description {
+            text-shadow: none;
+            font-size: smaller;
+            font-family: "Open Sans", sans-serif !important;
+            z-index: 5;
+            color: #757575;
+        }
+        
+        .item {
+            /* position: absolute; */
+            position: relative;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border: none;
+            width: 100%;
+        }
+        
+        .styleA a {
+            background-color: #F44336 !important;
+            display: flex;
+            width: 50px;
+            text-decoration: none;
+            font-size: smaller;
+        }
+        
+        l .styleB a {
+            background-color: #F44336 !important;
+            display: flex;
+            width: 89px;
+            text-decoration: none;
+            font-size: smaller;
+        }
+        
+        .styleC a {
+            background-color: #F44336 !important;
+            display: flex;
+            width: 80px;
+            text-decoration: none;
+            font-size: smaller;
+        }
+        
+        p {
+            color: antiquewhite;
+            margin: auto !important;
+            font-size: 100%;
+            background-color: #F44336 !important;
+            width: 89px;
+        }
+        /* .date {
+            color: rgb(94, 19, 19);
+            position: absolute;
+        
+            right: 16px;
+            top: 8px;
+            z-index: 9;
+        } */
+        
+        .glyphicon-chevron-left:before {
+            content: "\e079" !important;
+            margin-left: -30px !important;
+            display: block;
+            position: absolute;
+        }
+        
+        .glyphicon-chevron-right:before {
+            content: "\e080" !important;
+            margin-right: -100px !important;
+            display: block;
+            position: absolute;
+        }
+        
+        .fixed {
+            position: fixed;
+        }
+        
+        .carousel-control.right {
+            right: 0;
+            left: auto;
+            background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, .0000) 0, rgb(0 0 0 / 0%) 100%);
+        }
+        
+        .carousel-control.left {
+            left: 0;
+            right: auto;
+            background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, .0000) 0, rgb(0 0 0 / 0%) 100%);
+        }
+        
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 40%;
+            z-index: 15;
+            width: 60%;
+            padding-left: 0;
+            margin-left: -25.5%;
+            margin-bottom: 4%;
+            text-align: left;
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="content">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="4" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="5" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="6" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="7" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="8" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="9" class=""></li>
+
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="./assets/DTR.jpg" alt="dtr">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>DTR Reminder's</h5>
+                            </div>
+                            <div class="description ">Scheduled according to shift
+                            </div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1HjrSO0SYMLxUp9fuIM2YautbJ876GSPL/view?usp=sharing" target="_blank">
+                                    <p>Open</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item ">
+                    <!-- <div class="date">
+                            <h4><b>Jan. 12, 2021</b></h4>
+                        </div> -->
+                    <img src="./assets/9.jpg" alt="OsmeñaDay">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>Osmeña Day</h5>
+                            </div>
+                            <div class="description ">Special Non-Working Holiday ( September 9, 2021)
+                            </div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1HSiLzuYQg2irOlr9cC1Ms8iF7A5G0OPd/view?usp=sharing
+                                " target="_blank">
+                                    <p>Open</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <!-- <div class="date">
+                            <h4><b>Jan. 12, 2021</b></h4>
+                        </div> -->
+                    <img src="./assets/mae.png" alt="ISMS">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>Information Security Management System Awareness and Implementation</h5>
+                            </div>
+                            <div class="description ">Rolling out documents such as policies, manuals, procedures, and standards.
+                            </div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1WdvIzEM1dnbflJk_ZghXyn66-W_LoDel/view?usp=sharing" target="_blank">
+                                    <p>Open</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <!-- <div class="date">
+                            <h4><b>Jan. 12, 2021</b></h4>
+                        </div> -->
+                    <img src="./assets/mae.png" alt="ISMS">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>Information Security Management System Awareness</h5>
+                            </div>
+                            <div class="description ">One (1) hour Information Security Awareness-ISO 27001:2013 training course in Udemy.</div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1YLxH0aykkEs4gLpwuMjebbhaJO2QaAJx/view?usp=sharing" target="_blank">
+                                    <p>Open</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <!-- <div class="date">
+                            <h4><b>Jan. 12, 2021</b></h4>
+                        </div> -->
+                    <img src="./assets/National.png" alt="NationalHeroesDay">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>Special Non-Working Days and Regular Holidays</h5>
+                            </div>
+                            <div class="description ">Ninoy Aquino & National Heroes Day</div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1We-IKd9pnl3FOtrmM3_FdktqtLayU09B/view?usp=sharing" target="_blank">
+                                    <p>Open</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <!-- <div class="date">
+                            <h4><b>May 12, 2021</b></h4>
+                        </div> -->
+                    <img src="./assets/ftr.jpg" alt="Edl'ftr" class="b">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>Eid Al-Fitr (Feast of Ramadan) </h5>
+                            </div>
+                            <div class="description">Proclamation No. 1142 declares MAY 13, 2021 as Regular Holiday</div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1CrR9PRZmJfahAcMns6lfdkIgVTaY_QSb/view?usp=sharing" target="_blank">
+                                    <p>More</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <!-- <div class="date">
+                            <h4><b>Mar. 25, 2021</b></h4>
+                        </div> -->
+                    <img src="./assets/HolyWeek.png" alt="Holyweek">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>Holy Week and Araw ng Kagitingan </h5>
+                            </div>
+                            <div class="description">Proclamation No. 986 declares holidays througout the country</div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1Ns0dTk1nqSs-b1EDOrYU6ni5cjU5kiDt/view?usp=sharing" target="_blank">
+                                    <p>Open</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <!-- <div class="date">
+                            <h4><b>Feb. 24, 2021</b></h4>
+                        </div> -->
+                    <img src="./assets/iphone.jpg" alt="CellphoneBuying">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>Cellphone Buying Incentive Promo</h5>
+                            </div>
+                            <div class="description ">Promo runs from March 1 to June 30, 2021</div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1-YQ_Zj8_VvRu4dvQy1-pgVLcrNmJ6ZE5/view?usp=sharing" target="_blank">
+                                    <p>Open</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <!-- <div class="date">
+                            <h4><b>Feb. 10, 2021</b></h4>
+                        </div> -->
+                    <img src="./assets/CNY.png" alt="ChineseNewYear&EdsaRevolution">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>Special Non-Working Holidays</h5>
+                            </div>
+                            <div class="description ">Proclamation No. 986 and Republic Act No. 7287</div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1ej6KP46SI_YuEZU2PwTerLJGuanSHy8x/view?usp=sharing" target="_blank">
+                                    <p>More</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <!-- <div class="date">
+                            <h4><b>Jan. 12, 2021</b></h4>
+                        </div> -->
+                    <img src="./assets/MLPricing.png" alt="MLWallet">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div>
+                                <h5>New ML Wallet Pricing Scheme</h5>
+                            </div>
+                            <div class="description ">Pricing scheme which will take effect on February 15,2020</div>
+                            <div class="styleA">
+                                <a href="https://drive.google.com/file/d/1bWYXEeZrU2nw-DzyCPzMrQ-cygGd7msW/view?usp=sharing" target="_blank">
+                                    <p>Open</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <app-root></app-root>
+    <script src="runtime.0e49e2b53282f40c8925.js" defer=""></script>
+    <script src="polyfills.8c151b8375e767ff858f.js" defer=""></script>
+    <script src="main.d7212731f426f5e72fbb.js" defer=""></script>
+
+
+
+
+</body>
+
+</html>
